@@ -8,5 +8,5 @@
 import UIKit
 
 class RecommendedTrackCollectionViewCell: UICollectionViewCell {
-    static let identifer = "RecommendedTrackCollectionViewCell"
+    static let identifier = "RecommendedTrackCollectionViewCell"
 }
