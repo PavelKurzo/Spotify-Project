@@ -106,7 +106,6 @@ class NewReleaseCollectionViewCell: UICollectionViewCell {
         numberOfTrackLabel.text = "Tracks: \(viewModel.numberOfTracks)"
         albumCoverImageView.sd_setImage(with: viewModel.artworkURL, completed: nil)
     }
-    
 }
 
 
