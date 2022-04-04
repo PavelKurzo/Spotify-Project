@@ -22,7 +22,7 @@ class AlbumViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let title = album.name
+        title = album.name
         view.backgroundColor = .systemBackground
         
         APICaller.shared.getAlbumDetails(for: album) { result in
