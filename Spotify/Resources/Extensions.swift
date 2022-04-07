@@ -54,6 +54,6 @@ extension String {
         guard let date = DateFormatter.dateFormatter.date(from: string) else {
            return string
         }
-        return DateFormatter.displayDateFormatter.string(from: date) ?? string
+        return DateFormatter.displayDateFormatter.string(from: date) 
     }
 }

@@ -279,7 +279,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             vc.navigationItem.largeTitleDisplayMode = .never
             navigationController?.pushViewController(vc, animated: true)
         case .recommendedTracks:
-            break
+            let track = tracks[indexPath.row]
+            PlaybackPresenter.startPlayback(from: self, track: track)
         }
     }
     
@@ -416,8 +417,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             )
             let section = NSCollectionLayoutSection(group: group)
             section.orthogonalScrollingBehavior = .groupPaging
-            return section
             section.boundarySupplementaryItems = supplementaryViews
+            return section
         }
     }
 }
