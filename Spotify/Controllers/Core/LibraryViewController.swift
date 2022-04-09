@@ -27,8 +27,8 @@ class LibraryViewController: UIViewController {
         view.addSubview(toggleView)
         toggleView.delegate = self
         view.addSubview(scrollView)
-        scrollView.delegate = self
         scrollView.contentSize = CGSize(width: view.width * 2, height: scrollView.height)
+        scrollView.delegate = self
         addChildren()
     }
     

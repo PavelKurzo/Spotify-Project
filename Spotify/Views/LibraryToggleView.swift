@@ -83,7 +83,6 @@ class LibraryToggleView: UIView {
         super.layoutSubviews()
         playlistButton.frame = CGRect(x: 0, y: 0, width: 100, height: 40)
         albumsButton.frame = CGRect(x: playlistButton.right, y: 0, width: 100, height: 40)
-        indicatorView.frame = CGRect(x: 0, y: playlistButton.bottom, width: 100, height: 3)
         layoutIndicator()
     }
     
