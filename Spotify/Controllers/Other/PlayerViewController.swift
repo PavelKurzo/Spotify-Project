@@ -23,7 +23,6 @@ class PlayerViewController: UIViewController {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.backgroundColor = .systemBlue
         return imageView
     }()
     
@@ -57,10 +56,11 @@ class PlayerViewController: UIViewController {
     
     private func configure() {
         imageView.sd_setImage(with: dataSource?.imageURL, completed: nil)
-        controlsView.configure(with: PlayerControlsViewModel(
-            title: dataSource?.songName,
-            subtitle: dataSource?.subTitle
-        )
+        controlsView.configure(
+            with: PlayerControlsViewViewModel(
+                title: dataSource?.songName,
+                subtitle: dataSource?.subTitle
+            )
         )
     }
     
@@ -83,13 +83,13 @@ class PlayerViewController: UIViewController {
     @objc private func didTapAction() {
         // Actions
     }
+    
+    func refreshUI() {
+        configure()
+    }
 }
 
 extension PlayerViewController: PlayerControlsViewDelegate {
-    func playerControlsView(_ playerControlsView: PlayerControlsView, didSlideSlider value: Float) {
-        delegate?.didSlideSlider(value)
-    }
-    
     func playerControlsViewDidTapPlayPausebutton(_ playerControlsView: PlayerControlsView) {
         delegate?.didTapPlayPause()
     }
@@ -100,5 +100,9 @@ extension PlayerViewController: PlayerControlsViewDelegate {
     
     func playerControlsViewDidTapBackwardsbutton(_ playerControlsView: PlayerControlsView) {
         delegate?.didTapBackward()
+    }
+    
+    func playerControlsView(_ playerControlsView: PlayerControlsView, didSlideSlider value: Float) {
+        delegate?.didSlideSlider(value)
     }
 }

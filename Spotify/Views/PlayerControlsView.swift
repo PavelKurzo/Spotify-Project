@@ -15,7 +15,7 @@ protocol PlayerControlsViewDelegate: AnyObject {
     func playerControlsView(_ playerControlsView: PlayerControlsView, didSlideSlider value: Float)
 }
 
-struct PlayerControlsViewModel {
+struct PlayerControlsViewViewModel {
     let title: String?
     let subtitle: String?
 }
@@ -117,7 +117,7 @@ final class PlayerControlsView: UIView {
         let pause = UIImage(systemName: "pause", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
         let play = UIImage(systemName: "play.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
 
-        playPauseButton.setImage(isPlaying ? pause : play , for: .normal)
+        playPauseButton.setImage(isPlaying ? pause : play, for: .normal)
     }
     
     override func layoutSubviews() {
@@ -133,7 +133,7 @@ final class PlayerControlsView: UIView {
         nextButton.frame = CGRect(x: playPauseButton.right + 80, y: playPauseButton.top , width: buttonSize, height: buttonSize)
     }
     
-    func configure(with viewModel: PlayerControlsViewModel) {
+    func configure(with viewModel: PlayerControlsViewViewModel) {
         nameLabel.text = viewModel.title
         subtitleLabel.text = viewModel.subtitle
     }
