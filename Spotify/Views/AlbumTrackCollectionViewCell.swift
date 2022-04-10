@@ -25,7 +25,7 @@ class AlbumTrackCollectionViewCell: UICollectionViewCell {
         label.numberOfLines = 0
         return label
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .secondarySystemBackground
@@ -40,7 +40,7 @@ class AlbumTrackCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-
+        
         trackNameLabel.frame = CGRect(
             x: 10,
             y: 0,

@@ -89,7 +89,7 @@ final class PlayerControlsView: UIView {
         backButton.addTarget(self, action: #selector (didTapBack), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector (didTapNext), for: .touchUpInside)
         playPauseButton.addTarget(self, action: #selector (didTapPlayPause), for: .touchUpInside)
-
+        
         
         clipsToBounds = true
     }
@@ -116,7 +116,7 @@ final class PlayerControlsView: UIView {
         delegate?.playerControlsViewDidTapPlayPausebutton(self)
         let pause = UIImage(systemName: "pause", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
         let play = UIImage(systemName: "play.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
-
+        
         playPauseButton.setImage(isPlaying ? pause : play, for: .normal)
     }
     

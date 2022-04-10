@@ -8,7 +8,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(UITableViewCell.self,
@@ -60,21 +60,21 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                         self?.present(navVC, animated: true, completion: {
                             self?.navigationController?.popToRootViewController(animated: false)
                         })
+                    }
+                }
             }
-        }
-    }
         }))
         present(alert, animated: true)
     }
-                                      
-                                      private func viewProfile() {
-                            let vc = ProfileViewController()
-                            vc.title = "Profile"
-                            vc.navigationItem.largeTitleDisplayMode = .never
-                            navigationController?.pushViewController(vc, animated: true)
-                            
-                        }
-                                      
+    
+    private func viewProfile() {
+        let vc = ProfileViewController()
+        vc.title = "Profile"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds

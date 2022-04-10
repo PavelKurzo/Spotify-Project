@@ -13,16 +13,16 @@ class LibraryViewController: UIViewController {
     private let albumsVC = LibraryAlbumsViewController()
     
     private let scrollView: UIScrollView = {
-       let scrollView = UIScrollView()
+        let scrollView = UIScrollView()
         scrollView.isPagingEnabled = true
         return scrollView
     }()
     
     private let toggleView = LibraryToggleView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = .systemBackground
         view.addSubview(toggleView)
         toggleView.delegate = self
@@ -75,7 +75,7 @@ class LibraryViewController: UIViewController {
         albumsVC.view.frame = CGRect(x: view.width, y: 0, width: scrollView.width, height: scrollView.height)
         albumsVC.didMove(toParent: self)
     }
-
+    
 }
 
 extension LibraryViewController: UIScrollViewDelegate {

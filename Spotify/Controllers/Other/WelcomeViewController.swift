@@ -19,7 +19,7 @@ class WelcomeViewController: UIViewController {
     }()
     
     private let imageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.image = UIImage(named: "albums_background")
         return imageView

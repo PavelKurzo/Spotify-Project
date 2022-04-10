@@ -10,7 +10,7 @@ import UIKit
 class LibraryAlbumsViewController: UIViewController {
     
     var albums = [Album]()
-        
+    
     private let noAlbumsView = ActionLabelView()
     
     private let tableView: UITableView = {
@@ -36,7 +36,7 @@ class LibraryAlbumsViewController: UIViewController {
             queue: .main,
             using: { [weak self] _ in
                 self?.fetchData()
-        }
+            }
         )
     }
     
@@ -89,7 +89,7 @@ class LibraryAlbumsViewController: UIViewController {
             tableView.isHidden = false
         }
     }
-    }
+}
 
 extension LibraryAlbumsViewController: ActionLabelViewDelegate {
     func actionLabelViewDidTapButton(_ actionView: ActionLabelView) {

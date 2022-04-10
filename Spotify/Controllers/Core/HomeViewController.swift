@@ -108,10 +108,10 @@ class HomeViewController: UIViewController {
                 vc.title = "Select Playlist"
                 self?.present(UINavigationController(rootViewController: vc),
                               animated: true, completion: nil)
-           
+                
             }
         }))
-
+        
         present(actionSheet, animated: true)
     }
     
@@ -334,8 +334,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-                                                                     withReuseIdentifier: TitleHeaderCollectionReusableView.identifier,
-                                                                     for: indexPath
+                                                                           withReuseIdentifier: TitleHeaderCollectionReusableView.identifier,
+                                                                           for: indexPath
         ) as? TitleHeaderCollectionReusableView, kind == UICollectionView.elementKindSectionHeader else {
             return UICollectionReusableView()
         }

@@ -52,9 +52,9 @@ class LibraryPlaylistViewController: UIViewController {
         noPlaylistsView.delegate = self
         noPlaylistsView.configure(
             with: ActionLabelViewViewModel(
-            text: "You dont have any playlists yet.",
-            actionTitle: "Create"
-        )
+                text: "You dont have any playlists yet.",
+                actionTitle: "Create"
+            )
         )
     }
     
@@ -106,20 +106,20 @@ class LibraryPlaylistViewController: UIViewController {
                 guard let field = alert.textFields?.first,
                       let text = field.text,
                       !text.trimmingCharacters(in: .whitespaces).isEmpty else {
-                return
-            }
-            
-            APICaller.shared.createPlaylist(with: text) {  [weak self] success in
-                if success {
-                    HapticsManager.shared.vibrate(for: .success)
-                    self?.fetchData()
+                    return
                 }
-                else {
-                    HapticsManager.shared.vibrate(for: .error)
-                    print("Failed to create playlist")
+                
+                APICaller.shared.createPlaylist(with: text) {  [weak self] success in
+                    if success {
+                        HapticsManager.shared.vibrate(for: .success)
+                        self?.fetchData()
+                    }
+                    else {
+                        HapticsManager.shared.vibrate(for: .error)
+                        print("Failed to create playlist")
+                    }
                 }
-            }
-        }))
+            }))
         present(alert, animated: true)
     }
 }

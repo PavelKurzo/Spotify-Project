@@ -8,7 +8,7 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +31,7 @@ class TabBarViewController: UITabBarController {
         nav1.navigationBar.tintColor = .label
         nav2.navigationBar.tintColor = .label
         nav3.navigationBar.tintColor = .label
-
+        
         
         nav1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 1)
         nav2.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 1)
@@ -40,9 +40,7 @@ class TabBarViewController: UITabBarController {
         nav1.navigationBar.prefersLargeTitles = true
         nav2.navigationBar.prefersLargeTitles = true
         nav3.navigationBar.prefersLargeTitles = true
-
-        setViewControllers([nav1, nav2, nav3], animated: false)
         
+        setViewControllers([nav1, nav2, nav3], animated: false)
     }
-
 }

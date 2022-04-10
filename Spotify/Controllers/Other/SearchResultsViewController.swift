@@ -95,7 +95,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let result = sections[indexPath.section].results[indexPath.row]
-
+        
         switch result {
         case .artist(let artist):
             guard let cell = tableView.dequeueReusableCell(

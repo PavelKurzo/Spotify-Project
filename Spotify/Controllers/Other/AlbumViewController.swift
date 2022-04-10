@@ -44,7 +44,7 @@ class AlbumViewController: UIViewController {
     private var viewModels = [AlbumCollectionViewCellViewModel]()
     
     private var tracks = [AudioTrack]()
-
+    
     private let album: Album
     
     init(album: Album) {
@@ -89,21 +89,21 @@ class AlbumViewController: UIViewController {
                 }
                 else {
                     HapticsManager.shared.vibrate(for: .error)
-
+                    
                 }
             }
         }))
-
+        
         present(actionSheet, animated: true)
     }
     
-
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.frame = view.bounds
     }
     
-     func fetchData() {
+    func fetchData() {
         APICaller.shared.getAlbumDetails(for: album) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
