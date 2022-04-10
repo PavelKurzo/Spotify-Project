@@ -95,19 +95,27 @@ class LibraryPlaylistViewController: UIViewController {
         alert.addTextField { textField in
             textField.placeholder = "Playlist..."
         }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Create", style: .default, handler: { _ in
-            guard let field = alert.textFields?.first,
-                    let text = field.text,
-                    !text.trimmingCharacters(in: .whitespaces).isEmpty else {
+        alert.addAction(UIAlertAction(
+            title: "Cancel",
+            style: .cancel,
+            handler: nil))
+        alert.addAction(UIAlertAction(
+            title: "Create",
+            style: .default,
+            handler: { _ in
+                guard let field = alert.textFields?.first,
+                      let text = field.text,
+                      !text.trimmingCharacters(in: .whitespaces).isEmpty else {
                 return
             }
             
             APICaller.shared.createPlaylist(with: text) {  [weak self] success in
                 if success {
+                    HapticsManager.shared.vibrate(for: .success)
                     self?.fetchData()
                 }
                 else {
+                    HapticsManager.shared.vibrate(for: .error)
                     print("Failed to create playlist")
                 }
             }
@@ -142,6 +150,7 @@ extension LibraryPlaylistViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        HapticsManager.shared.vibrateForSeleciton()
         tableView.deselectRow(at: indexPath, animated: true)
         let playlist = playlists[indexPath.row]
         guard selectionHandler == nil else {
@@ -152,6 +161,7 @@ extension LibraryPlaylistViewController: UITableViewDelegate, UITableViewDataSou
         
         let vc = PlaylistViewController(playlist: playlist)
         vc.navigationItem.largeTitleDisplayMode = .never
+        vc.isOwner = true
         navigationController?.pushViewController(vc, animated: true)
     }
     

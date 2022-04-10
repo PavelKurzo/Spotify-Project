@@ -63,6 +63,7 @@
 		A89840FA2802187500A0EEC8 /* LibraryToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89840F92802187500A0EEC8 /* LibraryToggleView.swift */; };
 		A89840FC2802E72400A0EEC8 /* LibraryPlaylistsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89840FB2802E72400A0EEC8 /* LibraryPlaylistsResponse.swift */; };
 		A89840FE2802E9A900A0EEC8 /* ActionLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89840FD2802E9A900A0EEC8 /* ActionLabelView.swift */; };
+		A89841002803597E00A0EEC8 /* LibraryAlbumsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89840FF2803597E00A0EEC8 /* LibraryAlbumsResponse.swift */; };
 		A8EB668627F75393001CAFC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB668527F75393001CAFC0 /* AppDelegate.swift */; };
 		A8EB668827F75393001CAFC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB668727F75393001CAFC0 /* SceneDelegate.swift */; };
 		A8EB668A27F75393001CAFC0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB668927F75393001CAFC0 /* HomeViewController.swift */; };
@@ -131,6 +132,7 @@
 		A89840F92802187500A0EEC8 /* LibraryToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryToggleView.swift; sourceTree = "<group>"; };
 		A89840FB2802E72400A0EEC8 /* LibraryPlaylistsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPlaylistsResponse.swift; sourceTree = "<group>"; };
 		A89840FD2802E9A900A0EEC8 /* ActionLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionLabelView.swift; sourceTree = "<group>"; };
+		A89840FF2803597E00A0EEC8 /* LibraryAlbumsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAlbumsResponse.swift; sourceTree = "<group>"; };
 		A8EB668227F75393001CAFC0 /* Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8EB668527F75393001CAFC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8EB668727F75393001CAFC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				A89840DF27FDB7AD00A0EEC8 /* SearchResultsResponse.swift */,
 				A89840E127FDB9C600A0EEC8 /* SearchResult.swift */,
 				A89840FB2802E72400A0EEC8 /* LibraryPlaylistsResponse.swift */,
+				A89840FF2803597E00A0EEC8 /* LibraryAlbumsResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				A89840E027FDB7AD00A0EEC8 /* SearchResultsResponse.swift in Sources */,
 				A89840FE2802E9A900A0EEC8 /* ActionLabelView.swift in Sources */,
 				A89840D627FC5A7700A0EEC8 /* AlbumCollectionViewCellViewModel.swift in Sources */,
+				A89841002803597E00A0EEC8 /* LibraryAlbumsResponse.swift in Sources */,
 				A89840C227FAFB8C00A0EEC8 /* RecommendedTrackCellViewModel.swift in Sources */,
 				A8201FE927F7569C00B0361E /* WelcomeViewController.swift in Sources */,
 				A89840DE27FD9CAC00A0EEC8 /* CategoryViewController.swift in Sources */,
