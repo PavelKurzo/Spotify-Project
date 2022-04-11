@@ -90,7 +90,6 @@ final class PlayerControlsView: UIView {
         nextButton.addTarget(self, action: #selector (didTapNext), for: .touchUpInside)
         playPauseButton.addTarget(self, action: #selector (didTapPlayPause), for: .touchUpInside)
         
-        
         clipsToBounds = true
     }
     

@@ -34,7 +34,6 @@ class ActionLabelView: UIView {
         return button
     }()
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         clipsToBounds = true
@@ -61,5 +60,4 @@ class ActionLabelView: UIView {
         label.text = viewModel.text
         button.setTitle(viewModel.actionTitle, for: .normal)
     }
-    
 }

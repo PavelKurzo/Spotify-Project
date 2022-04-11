@@ -72,7 +72,6 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         vc.title = "Profile"
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
-        
     }
     
     override func viewDidLayoutSubviews() {

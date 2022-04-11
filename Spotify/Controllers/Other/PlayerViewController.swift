@@ -73,7 +73,6 @@ class PlayerViewController: UIViewController {
             barButtonSystemItem: .action,
             target: self,
             action: #selector(didTapAction))
-        
     }
     
     @objc private func didTapClose() {

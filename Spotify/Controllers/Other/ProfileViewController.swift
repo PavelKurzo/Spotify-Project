@@ -86,7 +86,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         label.textColor = .secondaryLabel
         view.addSubview(label)
         label.center = view.center
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

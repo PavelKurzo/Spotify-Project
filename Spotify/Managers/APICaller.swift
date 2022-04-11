@@ -129,7 +129,6 @@ final class APICaller {
                 catch {
                     completion(.failure(APIError.failedToGetData))
                 }
-                
             }
             task.resume()
         }
@@ -161,17 +160,14 @@ final class APICaller {
                             else {
                                 completion(false)
                             }
-                            
                         }
                         catch {
                             print(error.localizedDescription)
                             completion(false)
                         }
-                        
                     }
                     task.resume()
                 }
-                
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -214,11 +210,9 @@ final class APICaller {
                 catch {
                     completion(false)
                 }
-                
             }
             task.resume()
         }
-        
     }
     public func removeTrackFromPlaylist(
         track: AudioTrack,
@@ -258,7 +252,6 @@ final class APICaller {
                 catch {
                     completion(false)
                 }
-                
             }
             task.resume()
         }
@@ -427,7 +420,6 @@ final class APICaller {
                             let playlists = result.playlists.items
                             completion(.success(playlists))
                         }
-                        
                         catch {
                             completion(.failure(error))
                         }

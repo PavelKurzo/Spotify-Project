@@ -15,9 +15,12 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.tintColor = .white
-        imageView.image = UIImage(systemName: "music.quarternote.3", withConfiguration:
-                                    UIImage.SymbolConfiguration(pointSize: 50,
-                                                                weight: .regular))
+        imageView.image = UIImage(
+            systemName: "music.quarternote.3",
+            withConfiguration: UIImage.SymbolConfiguration(pointSize: 50,
+                                                           weight: .regular
+                                                          )
+        )
         return imageView
     }()
     

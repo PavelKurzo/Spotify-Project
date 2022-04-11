@@ -35,7 +35,6 @@ class AlbumViewController: UIViewController {
                     elementKind: UICollectionView.elementKindSectionHeader,
                     alignment: .top
                 )
-                
             ]
             return section
         })
@@ -89,14 +88,11 @@ class AlbumViewController: UIViewController {
                 }
                 else {
                     HapticsManager.shared.vibrate(for: .error)
-                    
                 }
             }
         }))
-        
         present(actionSheet, animated: true)
     }
-    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

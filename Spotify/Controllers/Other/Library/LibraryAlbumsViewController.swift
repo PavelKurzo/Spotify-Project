@@ -73,7 +73,6 @@ class LibraryAlbumsViewController: UIViewController {
                     print(error.localizedDescription)
                 }
             }
-            
         }
     }
     

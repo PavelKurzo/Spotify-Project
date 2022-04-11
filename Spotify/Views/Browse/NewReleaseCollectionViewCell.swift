@@ -47,7 +47,6 @@ class NewReleaseCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(artistNameLabel)
         contentView.clipsToBounds = true
         contentView.addSubview(numberOfTrackLabel)
-        
     }
     
     required init?(coder: NSCoder) {

@@ -21,7 +21,6 @@ final class PlaybackPresenter {
     private var track: AudioTrack?
     private var tracks = [AudioTrack]()
     
-    
     var currentTrack: AudioTrack? {
         if let track = track, tracks.isEmpty {
             return track
@@ -83,7 +82,6 @@ final class PlaybackPresenter {
         viewController.present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
         self.playerVC = vc
     }
-    
 }
 
 extension PlaybackPresenter: PlayerViewControllerDelegate {

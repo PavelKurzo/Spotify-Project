@@ -75,7 +75,6 @@ class LibraryViewController: UIViewController {
         albumsVC.view.frame = CGRect(x: view.width, y: 0, width: scrollView.width, height: scrollView.height)
         albumsVC.didMove(toParent: self)
     }
-    
 }
 
 extension LibraryViewController: UIScrollViewDelegate {

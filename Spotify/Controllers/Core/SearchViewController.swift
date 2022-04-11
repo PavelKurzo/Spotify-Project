@@ -105,6 +105,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
     }
     
     func updateSearchResults(for searchController: UISearchController) {
+        
     }
 }
 
@@ -137,11 +138,11 @@ extension SearchViewController: SearchResultsViewControllerDelegate {
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1    }
+        return 1
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

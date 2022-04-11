@@ -158,7 +158,6 @@ final class AuthManager {
                          value: "refresh_token"),
             URLQueryItem(name: "refresh_token",
                          value: refreshToken),
-            
         ]
         
         var request = URLRequest(url: url)
@@ -209,7 +208,6 @@ final class AuthManager {
         }
         UserDefaults.standard.setValue(Date().addingTimeInterval(TimeInterval(result.expires_in)),
                                        forKey: "expirationDate")
-        
     }
     
     public func signOut(completion: (Bool) -> Void) {

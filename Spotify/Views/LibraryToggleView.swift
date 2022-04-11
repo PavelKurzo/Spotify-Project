@@ -10,9 +10,6 @@ import UIKit
 protocol LibraryToggleViewViewDelegate: AnyObject {
     func libraryToggleViewDidTapPlaylists(_ toggleView: LibraryToggleView)
     func libraryToggleViewDidTapAlbums(_ toggleView: LibraryToggleView)
-    
-    
-    
 }
 
 class LibraryToggleView: UIView {
@@ -47,7 +44,6 @@ class LibraryToggleView: UIView {
         view.layer.cornerRadius = 4
         return view
     }()
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

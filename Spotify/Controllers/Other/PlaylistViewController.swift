@@ -40,7 +40,6 @@ class PlaylistViewController: UIViewController {
                     elementKind: UICollectionView.elementKindSectionHeader,
                     alignment: .top
                 )
-                
             ]
             return section
         })
@@ -144,8 +143,8 @@ class PlaylistViewController: UIViewController {
                 }
             }
         )
-        )
-    }
+    )
+}
     
     @objc private func didTapShare() {
         guard let url = URL(string: playlist.external_urls["spotify"] ?? "") else {
@@ -173,6 +172,7 @@ extension PlaylistViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModels.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: RecommendedTrackCollectionViewCell.identifier,
@@ -218,6 +218,5 @@ extension PlaylistViewController: PlaylistHeaderCollectionReusableViewDelegate {
         PlaybackPresenter.shared.startPlayback(
             from: self,
             tracks: tracks)
-        
     }
 }

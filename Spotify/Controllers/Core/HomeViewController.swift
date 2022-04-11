@@ -56,7 +56,6 @@ class HomeViewController: UIViewController {
             target: self,
             action: #selector(didTapSettings)
         )
-        
         configureCollectionView()
         view.addSubview(spinner)
         fetchData()
@@ -108,10 +107,8 @@ class HomeViewController: UIViewController {
                 vc.title = "Select Playlist"
                 self?.present(UINavigationController(rootViewController: vc),
                               animated: true, completion: nil)
-                
             }
         }))
-        
         present(actionSheet, animated: true)
     }
     
@@ -166,7 +163,6 @@ class HomeViewController: UIViewController {
                 featuredPlaylist = model
             case .failure(let error):
                 print(error.localizedDescription)
-                
             }
         }
         // recommended tracks

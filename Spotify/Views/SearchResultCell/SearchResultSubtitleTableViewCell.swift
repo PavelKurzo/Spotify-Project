@@ -60,7 +60,6 @@ class SearchResultSubtitleTableViewCell: UITableViewCell {
             width: contentView.width-iconImageView.right-15,
             height: labelHeight
         )
-        
         subtitleLabel.frame = CGRect(
             x: iconImageView.right+10,
             y: label.bottom,
